@@ -1,0 +1,9 @@
+<!-- favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Opal circular background -->
+  <circle cx="32" cy="32" r="28" fill="#C5E1DC"></circle>
+  <!-- AT monogram in deep green -->
+  <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="28" font-weight="800" letter-spacing="1" fill="#2E3A3A">
+    AT
+  </text>
+</svg>
