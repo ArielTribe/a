@@ -7,155 +7,27 @@
   <meta name="description" content="Ariel Tribe — creative marketing leader and brand/social strategist in Utah. I build integrated campaigns, elevate brand voice, and ship work that performs.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-<!-- Favicons -->
-<link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
-<link rel="icon" href="favicon-180.png" sizes="180x180" type="image/png">
-<link rel="apple-touch-icon" href="favicon-180.png">
+  <!-- Favicons (PNG-only setup) -->
+  <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-180.png" sizes="180x180" type="image/png">
+  <link rel="apple-touch-icon" href="favicon-180.png">
 
-  <style>
-    :root{
-      --cream:#f6f2ec;
-      --mauve:#d0a0a1;
-      --rose:#d2a8a8;
-      --text:#2E3A3A;
-      --muted:#5A6A6A;
-      --card:#ffffff;
-      --radius:18px;
-      --shadow:0 10px 30px rgba(34,60,60,.08);
-    }
-
-    /* Base */
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text);
-      background: var(--cream);
-      line-height:1.6;
-    }
-    h1,h2,h3{margin:0 0 .5rem 0}
-    h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05}
-    h2{font-size:clamp(1.6rem,3.5vw,2.2rem)}
-    h3{font-size:1.15rem}
-    p{color:var(--muted)}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
-    /* Nav */
-    .nav{
-      position:sticky; top:0; z-index:10;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:.9rem 1.2rem;
-      background:rgba(255,255,255,.7);
-      backdrop-filter:saturate(140%) blur(8px);
-      border-bottom:1px solid rgba(0,0,0,.05);
-    }
-    .logo{font-weight:800; letter-spacing:.5px}
-    .nav-links a{margin-left:1rem; font-weight:600}
-    .btn{
-      display:inline-block; padding:.6rem .95rem; border-radius:9999px; border:2px solid transparent;
-      background:#fff; font-weight:600; transition:.18s transform ease, .18s background-color ease, .18s color ease, .18s border-color ease;
-    }
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{background:var(--mauve); color:#fff; border-color:var(--mauve)}
-    .btn.primary:hover{background:#b88788; border-color:#b88788}
-    .btn.ghost{background:transparent; border-color:var(--mauve); color:var(--mauve)}
-    .btn.ghost:hover{background:#f0e5e5}
-
-    /* Hero (split) */
-    .hero{position:relative; overflow:hidden; min-height:72vh}
-    .hero-bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:scale(1.02); filter:none}
-    .hero-overlay{
-      position:absolute; inset:0;
-      background:
-        radial-gradient(70% 60% at 50% 40%, rgba(255,255,255,.55), rgba(255,255,255,.18)),
-        linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,.85));
-    }
-    .hero-inner{position:relative; padding:2rem; max-width:1100px; margin:0 auto}
-    .split{display:grid; grid-template-columns:1.2fr .8fr; gap:2rem; align-items:center}
-    @media (max-width:900px){ .split{grid-template-columns:1fr; text-align:center} .portrait-wrap{margin:0 auto} }
-
-    .lead{font-size:clamp(1rem,2.2vw,1.25rem)}
-    .underline{background:linear-gradient(180deg, transparent 70%, var(--rose) 70%)}
-    .pill{
-      display:inline-block; margin-bottom:.9rem;
-      background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:999px;
-      padding:.35rem .7rem; font-size:.9rem;
-    }
-    .chips{display:flex; gap:.5rem; flex-wrap:wrap; margin:1rem 0}
-    .chips span{background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:999px; padding:.4rem .7rem; font-size:.85rem}
-
-    /* Portrait – solid white border, no shadow */
-    .portrait-wrap{ position:relative; width:min(380px, 90%); aspect-ratio:1/1; margin-left:auto; }
-    .hero-portrait{
-      width:100%; height:100%; object-fit:cover; border-radius:9999px;
-      border:6px solid #fff; /* clean white border */
-      box-shadow:none;      /* no drop shadow */
-    }
-
-    /* Layout + Cards */
-    .wrap{max-width:1100px; margin:0 auto; padding:3.5rem 1.2rem}
-    .section-head{max-width:760px; margin:0 auto 1.6rem auto; text-align:center}
-    .grid{display:grid; gap:1rem}
-    .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:900px){ .grid.two,.grid.three{grid-template-columns:1fr} }
-
-    .card{
-      background:var(--card); border:1px solid rgba(0,0,0,.06);
-      border-radius:var(--radius); padding:1.2rem; box-shadow:var(--shadow);
-    }
-    .card.hover{transition:transform .18s ease, box-shadow .18s ease}
-    .card.hover:hover{transform:translateY(-3px); box-shadow:0 16px 40px rgba(34,60,60,.12)}
-
-    /* Accents (headings + tags) */
-    .section-head h2{
-      display:inline-block;
-      border-bottom:3px solid var(--rose);
-      padding-bottom:4px;
-    }
-    .tag{
-      font-size:.75rem; font-weight:700; letter-spacing:.5px; text-transform:uppercase;
-      background: #f0dada; color:#613b3b;
-      padding:.25rem .5rem; border-radius:6px; display:inline-block; margin-bottom:.6rem;
-    }
-    .meta{font-size:.85rem; color:#6b7a7a}
-
-    /* About bullets */
-    .card ul.bullets{ list-style: disc; padding-left:1.2rem; margin:0 }
-    .card ul.bullets li{ margin-bottom:.4rem; color:var(--text) }
-    .card ul.bullets li::marker{ color: var(--mauve) }
-
-    /* Notes / Principles */
-    .stack{display:grid; gap:.6rem}
-    .note{
-      display:block; padding:1rem 1.2rem; border-radius:12px;
-      background:#fff; border:1px dashed rgba(0,0,0,.12);
-    }
-
-    /* Contact */
-    .contact .contact-cards{display:grid; gap:1rem; grid-template-columns:repeat(2,minmax(0,1fr))}
-    .contact .row{display:flex; align-items:center; gap:.9rem; font-weight:600}
-    .contact .row span{font-size:1.4rem}
-    @media (max-width:700px){ .contact .contact-cards{grid-template-columns:1fr} }
-
-    /* Footer */
-    .footer{padding:2rem 1.2rem; text-align:center; color:#6b7a7a}
-  </style>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav class="nav">
     <a class="logo" href="#home">Ariel Tribe</a>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#work">Work</a>
+      <a href="work.html">Work</a>
       <a href="#insights">My Guiding Principles</a>
       <a class="btn" href="#contact">Say hi</a>
     </div>
   </nav>
 
   <header id="home" class="hero">
-    <img class="hero-bg" src="hero.jpg" alt="">
+    <img class="hero-bg" src="hero.jpg" alt="Abstract soft background">
     <div class="hero-overlay"></div>
 
     <div class="hero-inner split">
@@ -216,38 +88,38 @@
       </div>
     </section>
 
-<section id="work" class="wrap">
-  <div class="section-head">
-    <h2>Work Highlights</h2>
-    <p>A few projects I’ve loved leading.</p>
-  </div>
+    <section id="work" class="wrap">
+      <div class="section-head">
+        <h2>Work Highlights</h2>
+        <p>A few projects I’ve loved leading.</p>
+      </div>
 
-  <div class="grid three">
-    <article class="card hover">
-      <span class="tag">Launch</span>
-      <h3>Sears Home Advantage</h3>
-      <p>Planned and led the nationwide launch of a first-of-its-kind home services membership. Built the messaging, mapped the customer journey, and worked across product, creative, CRM, and media to bring it to life.</p>
-      <p class="meta">1.2M members joined in the first 6 months</p>
-      <a class="stretched-link" href="work.html#sears" aria-label="Open Sears Home Advantage details"></a>
-    </article>
+      <div class="grid three">
+        <article class="card hover">
+          <span class="tag">Launch</span>
+          <h3>Sears Home Advantage</h3>
+          <p>Planned and led the nationwide launch of a first-of-its-kind home services membership. Built the messaging, mapped the customer journey, and worked across product, creative, CRM, and media to bring it to life.</p>
+          <p class="meta">1.2M members joined in the first 6 months</p>
+          <a class="stretched-link" href="work.html#sears" aria-label="Open Sears Home Advantage details"></a>
+        </article>
 
-    <article class="card hover">
-      <span class="tag">Integrated Marketing</span>
-      <h3>Zillow — Campaign Strategy</h3>
-      <p>Partnered with product, PR, and creative teams to develop and execute integrated campaigns that brought Zillow’s brand story to life. Delivered cross-channel content for email, web, social, and field activations, ensuring a consistent voice and measurable engagement.</p>
-      <p class="meta">Strengthened brand presence across national marketing initiatives</p>
-      <a class="stretched-link" href="work.html#zillow" aria-label="Open Zillow Campaign Strategy details"></a>
-    </article>
+        <article class="card hover">
+          <span class="tag">Integrated Marketing</span>
+          <h3>Zillow — Campaign Strategy</h3>
+          <p>Partnered with product, PR, and creative teams to develop and execute integrated campaigns that brought Zillow’s brand story to life. Delivered cross-channel content for email, web, social, and field activations, ensuring a consistent voice and measurable engagement.</p>
+          <p class="meta">Strengthened brand presence across national marketing initiatives</p>
+          <a class="stretched-link" href="work.html#zillow" aria-label="Open Zillow Campaign Strategy details"></a>
+        </article>
 
-    <article class="card hover">
-      <span class="tag">Side Project</span>
-      <h3>Opal &amp; Quin</h3>
-      <p>A new creative venture where I channel my love for design into printable invitations, games, art prints and templates. From concept to final product, I explore trends, test ideas, and connect directly with customers in a hands-on, end-to-end process.</p>
-      <p class="meta">Blending design passion with real-world product creation</p>
-      <a class="stretched-link" href="work.html#opal-quin" aria-label="Open Opal & Quin details"></a>
-    </article>
-  </div>
-</section>
+        <article class="card hover">
+          <span class="tag">Side Project</span>
+          <h3>Opal &amp; Quin</h3>
+          <p>A new creative venture where I channel my love for design into printable invitations, games, art prints and templates. From concept to final product, I explore trends, test ideas, and connect directly with customers in a hands-on, end-to-end process.</p>
+          <p class="meta">Blending design passion with real-world product creation</p>
+          <a class="stretched-link" href="work.html#opal-quin" aria-label="Open Opal & Quin details"></a>
+        </article>
+      </div>
+    </section>
 
     <section id="insights" class="wrap">
       <div class="section-head">
