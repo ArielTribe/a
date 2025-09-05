@@ -120,10 +120,13 @@ img{max-width:100%;display:block}
 }
 .meta{font-size:.85rem; color:#6b7a7a}
 
-/* About bullets */
+/* Bullets (for cards and work page) */
 .card ul.bullets{ list-style: disc; padding-left:1.2rem; margin:0 }
 .card ul.bullets li{ margin-bottom:.4rem; color:var(--text) }
 .card ul.bullets li::marker{ color: var(--mauve) }
+ul.bullets{ list-style: disc; padding-left:1.2rem; margin:.6rem 0 }
+ul.bullets li{ margin-bottom:.35rem; color:var(--text) }
+ul.bullets li::marker{ color: var(--mauve) }
 
 /* Notes / Principles */
 .stack{display:grid; gap:.6rem}
@@ -140,3 +143,14 @@ img{max-width:100%;display:block}
 
 /* Footer */
 .footer{padding:2rem 1.2rem; text-align:center; color:#6b7a7a}
+
+/* Work page layout */
+section[id]{ scroll-margin-top: 80px; }
+.work-row{display:grid; grid-template-columns:1.2fr .8fr; gap:1.2rem; align-items:center; margin-bottom:2rem}
+.work-row.reverse{grid-template-columns:.8fr 1.2fr}
+.work-copy h2{display:inline-block; border-bottom:3px solid var(--rose); padding-bottom:4px}
+.work-img{border-radius:12px; overflow:hidden; border:1px solid rgba(0,0,0,.06); background:#fff}
+.work-img img{width:100%; height:auto; display:block}
+@media (max-width:900px){
+  .work-row, .work-row.reverse { grid-template-columns:1fr; }
+}
