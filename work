@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Selected Work — Ariel Tribe</title>
+  <meta name="description" content="Selected work by Ariel Tribe — integrated marketing, brand storytelling, social strategy, and creative projects.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --cream:#f6f2ec; --mauve:#d0a0a1; --rose:#d2a8a8;
+      --text:#2E3A3A; --muted:#5A6A6A; --card:#fff;
+      --radius:18px; --shadow:0 10px 30px rgba(34,60,60,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0; scroll-behavior:smooth;}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--cream); color:var(--text); line-height:1.6;}
+    h1,h2,h3{margin:0 0 .5rem 0}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem); line-height:1.1}
+    h2{font-size:clamp(1.4rem,3.5vw,2rem)}
+    p{color:var(--muted)}
+    a{color:inherit; text-decoration:none}
+
+    /* Nav */
+    .nav{position:sticky; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center;
+         padding:.9rem 1.2rem; background:rgba(255,255,255,.7); backdrop-filter:saturate(140%) blur(8px);
+         border-bottom:1px solid rgba(0,0,0,.05);}
+    .logo{font-weight:800}
+    .nav-links a{margin-left:1rem; font-weight:600}
+    .btn{display:inline-block; padding:.6rem .95rem; border-radius:9999px; border:2px solid transparent; background:#fff; font-weight:600}
+    .btn.primary{background:var(--mauve); color:#fff; border-color:var(--mauve)}
+    .btn.ghost{background:transparent; border-color:var(--mauve); color:var(--mauve)}
+
+    .wrap{max-width:1100px; margin:0 auto; padding:3rem 1.2rem}
+    .section-head{max-width:800px; margin:0 auto 1.6rem auto; text-align:center}
+    .card{background:var(--card); border:1px solid rgba(0,0,0,.06); border-radius:var(--radius); padding:1.2rem; box-shadow:var(--shadow)}
+    .meta{font-size:.9rem; color:#6b7a7a}
+    .tag{display:inline-block; font-size:.75rem; font-weight:700; letter-spacing:.5px; text-transform:uppercase; background:#efdede; color:#613b3b; padding:.25rem .5rem; border-radius:6px; margin-bottom:.6rem}
+
+    /* Work rows */
+    section.work { scroll-margin-top:80px; } /* offset for sticky nav */
+    .work-row{display:grid; grid-template-columns:1.2fr .8fr; gap:1.2rem; align-items:center; margin-bottom:2rem}
+    .work-row.reverse{grid-template-columns:.8fr 1.2fr}
+    .work-copy h2{display:inline-block; border-bottom:3px solid var(--rose); padding-bottom:4px}
+    .bullets{ list-style:disc; padding-left:1.2rem; margin:.6rem 0 }
+    .bullets li{ margin-bottom:.35rem }
+
+    .work-img{border-radius:12px; overflow:hidden; border:1px solid rgba(0,0,0,.06); background:#fff}
+    .work-img img{width:100%; height:auto; display:block}
+
+    @media (max-width:900px){
+      .work-row, .work-row.reverse { grid-template-columns:1fr; }
+    }
+
+    /* Footer */
+    .footer{padding:2rem 1.2rem; text-align:center; color:#6b7a7a}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="index.html#home">Ariel Tribe</a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#insights">My Guiding Principles</a>
+      <a class="btn" href="index.html#contact">Say hi</a>
+    </div>
+  </nav>
+
+  <header class="wrap section-head">
+    <h1>Selected Work</h1>
+    <p class="meta">Three examples with brief context and visuals. Jump directly using: Sears, Zillow, or Opal &amp; Quin.</p>
+  </header>
+
+  <!-- 1) Sears -->
+  <section id="sears" class="wrap work">
+    <div class="work-row">
+      <div class="work-copy">
+        <span class="tag">Launch</span>
+        <h2>Sears Home Advantage</h2>
+        <p>Nationwide launch of a first-of-its-kind home services membership. I led positioning, journey mapping, creative briefs, and integrated channel orchestration.</p>
+        <ul class="bullets">
+          <li>Messaging framework + value prop</li>
+          <li>Customer journey (upper funnel → retention)</li>
+          <li>Paid + owned plan with performance KPI tree</li>
+        </ul>
+        <p class="meta"><strong>Outcome:</strong> 1.2M members in the first 6 months.</p>
+      </div>
+      <div class="work-img">
+        <img src="images/sears.jpg" alt="Sears Home Advantage campaign creative mockups">
+      </div>
+    </div>
+  </section>
+
+  <!-- 2) Zillow -->
+  <section id="zillow" class="wrap work">
+    <div class="work-row reverse">
+      <div class="work-img">
+        <img src="images/zillow.jpg" alt="Zillow integrated campaign assets across channels">
+      </div>
+      <div class="work-copy">
+        <span class="tag">Integrated Marketing</span>
+        <h2>Zillow — Campaign Strategy</h2>
+        <p>Cross-channel campaign planning and execution with product, PR, and creative. Ensured voice consistency and measurable engagement across email, web, social, and field.</p>
+        <ul class="bullets">
+          <li>Unified messaging + living style guide</li>
+          <li>Modular assets for faster iteration and reuse</li>
+          <li>Clear handoffs and reporting framework</li>
+        </ul>
+        <p class="meta"><strong>Impact:</strong> Stronger, more consistent brand presence across national initiatives.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3) Opal & Quin -->
+  <section id="opal-quin" class="wrap work">
+    <div class="work-row">
+      <div class="work-copy">
+        <span class="tag">Side Project</span>
+        <h2>Opal &amp; Quin</h2>
+        <p>A hands-on creative venture: printable invitations, games, art prints, and templates. I explore trends, test ideas, and ship end-to-end—from concept to customer feedback.</p>
+        <ul class="bullets">
+          <li>Concept → design → mockups → listing assets</li>
+          <li>Lightweight market tests + iteration loops</li>
+          <li>Review mining to refine SKUs and listings</li>
+        </ul>
+        <p class="meta"><strong>Why it matters:</strong> Keeps me close to real users and real results.</p>
+      </div>
+      <div class="work-img">
+        <img src="images/opal-quin.jpg" alt="Opal & Quin product collage: invitations, games, and prints">
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap footer">
+    <p>© <span id="y"></span> Ariel Tribe</p>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
