@@ -145,16 +145,44 @@ ul.bullets li::marker{ color: var(--mauve) }
 .footer{padding:2rem 1.2rem; text-align:center; color:#6b7a7a}
 
 /* Work page layout */
-section[id]{ scroll-margin-top: 80px; }
-.work-row{display:grid; grid-template-columns:1.2fr .8fr; gap:1.2rem; align-items:center; margin-bottom:2rem}
-.work-row.reverse{grid-template-columns:.8fr 1.2fr}
-.work-copy h2{display:inline-block; border-bottom:3px solid var(--rose); padding-bottom:4px}
-.work-img{border-radius:12px; overflow:hidden; border:1px solid rgba(0,0,0,.06); background:#fff}
-.work-img img{width:100%; height:auto; display:block}
+.work-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;   /* was 1.2fr .8fr */
+  gap:1.5rem;
+  align-items:center;
+  margin-bottom:3rem;
+}
+.work-row.reverse{ grid-template-columns:1fr 1fr; }
 
-/* Video styling to match card look */
-.work-video{display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover}
+/* Frame + centering for images/videos */
+.work-img{
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,.06);
+  background:#fff;
+  display:flex;                 /* center media if shorter than text */
+  align-items:center;
+  justify-content:center;
+}
+
+/* Show entire media (no crop) */
+.work-img img,
+.work-video{
+  width:100%;
+  height:auto;
+  max-height:560px;             /* keeps very long text from making media huge */
+  object-fit:contain;           /* was cover on video */
+}
+
+/* Ensure any old aspect-ratio on video is cleared */
+.work-video{ aspect-ratio:unset; }
+
+/* Nice readable text width */
+.work-copy{ max-width:60ch; }
 
 @media (max-width:900px){
-  .work-row, .work-row.reverse { grid-template-columns:1fr; }
+  .work-row,
+  .work-row.reverse{ grid-template-columns:1fr; }
+  .work-img img,
+  .work-video{ max-height:none; }
 }
